@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fibonacciSequence = [];
+    for (let i = 1; i <= 20; i++) {
+        fibonacciSequence.push(fibonacci(i));
+    }
+    for (let m = 0; m <= fibonacciSequence.length; m++) {
+        if (fibonacciSequence[m] % 5 == 0) {
+            alert("Số đầu tiên trong dãy fibonacci chia hết cho 5 là : " + fibonacciSequence[m])
+            break;
+        }
+    }
+
+
+    function fibonacci(n) {
+        let a = 0, b = 1, f = 1;
+        for (let i = 2; i <= n; i++) {
+            f = a + b;
+            a = b;
+            b = f;
+        }
+        return f;
+    }
+</script>
+</body>
+</html>

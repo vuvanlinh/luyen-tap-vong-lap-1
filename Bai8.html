@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Hãy nhập khoảng bạn muốn đoán(a->b)|  a= "));
+    let b = parseInt(prompt("Hãy nhập khoảng bạn muốn đoán(a->b)|  b= "));
+    gamelottery(a, b)
+
+    function gamelottery(a, b) {
+        let x = Math.floor((Math.random() * b) + a);
+        for (let i = 1; i < 4; i++) {
+            let lotery = prompt("Bạn còn " + (4 - i) + " lần nhập, hãy nhập số bạn dự đoán trong khoảng " + a + " tới " + b + " vào: ");
+            if (lotery == x) {
+                alert("Chúc mừng bạn đã đoán đúng :) ");
+                break;
+            } else {
+                alert("Chúc bạn may mắn lần sau :( ");
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

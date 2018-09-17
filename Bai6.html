@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let numbers = 0;
+    for (let i = 1; numbers < 30; i++) {
+        if (i % 7 == 0) {
+            a.push(i);
+            numbers = numbers + 1;
+        }
+    }
+    document.write('30 số đầu tiên chia hết cho 7 là : ' + a + ' ' + '<br>');
+    let total = 0;
+    for (m = 0; m <= a.length - 1; m++) {
+        total += a[m]
+    }
+    document.write("Tổng 30 số đầu tiên chia hết cho 7 là : " + total);
+
+
+</script>
+</body>
+</html>
